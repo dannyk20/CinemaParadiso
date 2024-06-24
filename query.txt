@@ -1,0 +1,43 @@
+CREATE DATABASE `cinemaparadiso` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+use cinemaparadiso;
+
+CREATE TABLE `cp_account`(
+	`id` varchar(50) NOT NULL,
+    `password` varchar(60) NOT NULL,
+    `name` varchar(15) DEFAULT NULL,
+    `date` date DEFAULT NULL,
+    PRIMARY KEY(`id`)
+)  ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `movie_table` (
+  `rank` varchar(10) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `poster` varchar(100) NOT NULL,
+  `movie_code` varchar(50) NOT NULL,
+   PRIMARY KEY(`movie_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `movie_info`(
+	`title` varchar(100) NOT NULL,
+    `poster` varchar(100) NOT NULL,
+    `count` varchar(100) DEFAULT NULL,
+    `pg` int NOT NULL,
+    `running_time` int DEFAULT NULL,
+	`onscreen` date DEFAULT NULL,
+    `director` varchar(100) NOT NULL,
+    `cast` varchar(100) NOT NULL,
+    `synopsis` varchar(1000) DEFAULT NULL,
+    `movie_code` varchar(50) NOT NULL,
+    `stillcut` varchar(100) DEFAULT NULL,
+    `genre` varchar(50) DEFAULT NULL,
+    PRIMARY KEY(`movie_code`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `comment_table` (
+  `id` varchar(50) NOT NULL,
+  `rating` int default 0,
+  `comment` varchar(1000) NOT NULL,
+  `movie_code` varchar(100) NOT NULL,
+  PRIMARY KEY(`id`, `movie_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
