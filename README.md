@@ -1,5 +1,6 @@
 # CinemaParadiso
 
+![image01](https://github.com/dannyk20/CinemaParadiso/assets/44746738/9932f6a8-99c3-4ecd-bed3-ca64d17e946c)
 Welcome to **CinemaParadiso**, the ultimate community-driven platform for movie enthusiasts! Here, users can discover, discuss, and review their favorite films.
 
 ## Table of Contents
